@@ -1,0 +1,39 @@
+body{
+    margin:0;
+}
+div.window#battle{
+    display: inline-block;
+    position:absolute;
+    top:0;
+    background-color: green;
+    width:100%;
+    height: 50svh;
+}
+div.window#menu{
+    display: flex;
+    position:absolute;
+    bottom:0;
+    background-color: black;
+    width:100%;
+    height: 50svh;
+}
+.menubutton{
+    margin:auto;
+    width: 10svh;
+    height: 10svh;
+}
+.battleui{
+    width:20svh;
+    height: 10svh;
+    background:blue;
+}
+.battleui#enemyui{
+    position: absolute;
+    left:0;
+    top:0;
+}
+.battleui#playerui{
+    position: absolute;
+    right:0;
+    bottom:0;
+}
