@@ -58,6 +58,7 @@
     font-size: calc(0.8vh + 1em);
 	font-family:monospace;
     border-radius: 16px;
+    vertical-align: middle;
 }
 
 .devle_button a{
