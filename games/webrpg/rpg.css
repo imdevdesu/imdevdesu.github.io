@@ -1,19 +1,117 @@
 body{
     margin:0;
+    font-family: monospace;
 }
-div.window#battle{
+
+/* overworld */
+
+div#world {
+    background-color: black;
+    width: 100%;
+    height: 50svh;
+    position: absolute;
+}
+
+div.overworld_char {
+    background-color: pink;
+    width: 8svh;
+    height: 8svh;
+    position:relative;
+}
+
+div.sprite {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height:100%;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+}
+
+#overworld_player {
+    position: relative;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#dpad {
+    display: flex;
+    padding-left:5svw;
+}
+
+#face_buttons {
+    display: flex;
+    margin-left:auto;
+    padding-right: 5svw;
+    padding-top: 10svh;
+}
+
+#overworld_menu {
+    display: flex;
+}
+
+/* battle ui */
+
+#battle_init {
+    display: none;
+}
+
+.battleui#enemyui{
+    position: absolute;
+    right:0;
+    top:0;
+}
+.battleui#playerui{
+    position: absolute;
+    left:0;
+    top:0;
+}
+
+/* battle characters */
+
+.character {
+    width: 10svh;
+    height: 10svh;
+    background-color: pink;
+    position:absolute;
+}
+
+.character#player {
+    bottom:0;
+    left:10svh;;
+}
+
+.character#enemy {
+    bottom:0;
+    right:10svh;;
+}
+
+div.window {
+    position:absolute;
+    bottom:0;
+    background-color: black;
+    width:100svw;
+    height: 50svh;
+}
+
+/* initially hidden, will become visible if attack is pressed */
+div.window#battle_menu{
+    display: flex;
+}
+div.window#attack_menu {
+    display: none;
+}
+div.window#item_menu {
+    display: none;
+}
+/* the "top screen" */
+div.window#battle_view{
     display: inline-block;
     position:absolute;
     top:0;
     background-color: green;
-    width:100%;
-    height: 50svh;
-}
-div.window#menu{
-    display: flex;
-    position:absolute;
-    bottom:0;
-    background-color: black;
     width:100%;
     height: 50svh;
 }
@@ -22,18 +120,13 @@ div.window#menu{
     width: 10svh;
     height: 10svh;
 }
+.whitespace {
+    margin:auto;
+    width: 10svh;
+    height: 10svh;
+}
 .battleui{
     width:20svh;
     height: 10svh;
     background:blue;
-}
-.battleui#enemyui{
-    position: absolute;
-    left:0;
-    top:0;
-}
-.battleui#playerui{
-    position: absolute;
-    right:0;
-    bottom:0;
 }
